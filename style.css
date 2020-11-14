@@ -22,6 +22,11 @@ body {
   font-size: 1.6rem;
 }
 
+.u-padding {
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -41,5 +46,10 @@ body {
 
 .nav svg {
   fill: #ffffff;
+}
+
+.details {
+  display: -ms-grid;
+  display: grid;
 }
 /*# sourceMappingURL=style.css.map */

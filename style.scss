@@ -21,6 +21,12 @@ body {
   font-size: 1.6rem;
 }
 
+// Utilities
+.u-padding {
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+}
+
 
 // Navigation section
 .nav {
@@ -36,3 +42,10 @@ body {
     fill:#ffffff;
   }
 }
+
+// Details section
+.details {
+  display: grid;
+}
+
+// Footer section
