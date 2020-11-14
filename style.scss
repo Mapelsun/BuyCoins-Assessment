@@ -21,6 +21,11 @@ body {
   font-size: 1.6rem;
 }
 
+// Variables
+:root {
+  --main-color: #ffffff;
+}
+
 // Utilities
 .u-padding {
   padding-left: 1.6rem;
@@ -30,16 +35,43 @@ body {
 
 // Navigation section
 .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  color: rgba(#ffffff, 0.7);
+  background: #24292e;
   font-size: 1.4rem;
   padding: 1.6rem;
   line-height: 1.5;
-  color: rgba(#ffffff, 0.7);
-  background: #24292e;
   svg {
-    fill:#ffffff;
+    fill: var(--main-color);
+  }
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.6rem;
+  }
+  &__search-wrapper {
+    position: relative;
+  }
+  &__search {
+    width: 100%;
+    border: 1px solid #444d56;
+    border-radius: .6rem;
+    background: #24292e;
+    color: var(--main-color);
+    padding: .5rem 1.2rem;
+    &::placeholder {
+      color: rgba(#ffffff, 0.7);
+      letter-spacing: normal;
+    }
+    &:active, &:focus {
+      outline: none;
+      background: var(--main-color);
+    }
+  }
+  &__search-icon {
+    position: absolute;
+    top: .4rem;
+    right: 1rem;
   }
 }
 
