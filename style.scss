@@ -163,7 +163,7 @@ svg:not(:root) {
       }
       .counter {
         min-width: 2rem;
-        padding: 0 .6rem;
+        padding: 0 0.6rem;
         font-size: 1.2rem;
         font-weight: 500;
         line-height: 1.8rem;
@@ -269,6 +269,86 @@ svg:not(:root) {
     }
   }
   &__right {
+    .form {
+      padding: 1.6rem 0 0;
+      display: grid;
+      grid-row-gap: 1.6rem;
+      &__search {
+        outline-offset: -2px;
+        padding: 0.5rem 1.2rem;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        background-repeat: no-repeat;
+        background-position: right 8px center;
+        color: #24292e;
+        background-color: #ffffff;
+        box-shadow: rgba(225, 228, 232, 0.2) 0px 1px 0px 0px inset;
+        border: 1px solid #e1e4e8;
+        border-radius: 0.6rem;
+        outline: none;
+      }
+      &__btns {
+        display: flex;
+        justify-content: space-between;
+        &--btn {
+          position: relative;
+          display: inline-block;
+          padding: 0.5rem 1.2rem;
+          font-size: 1.4rem;
+          font-weight: 500;
+          line-height: 2rem;
+          white-space: nowrap;
+          cursor: pointer;
+          border: 1px solid rgba(27, 31, 35, 0.15);
+          border-radius: 0.6rem;
+          appearance: none;
+          transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+          transition-property: color, background-color, border-color;
+        }
+        &--one {
+          color: #24292e;
+          background-color: #fafbfc;
+          &:hover,
+          &:active {
+            background-color: #f3f4f6;
+            transition-duration: 0.1s;
+          }
+          span:nth-of-type(1) {
+            font-style: normal;
+            font-weight: 500;
+            opacity: 0.75;
+          }
+          span:nth-of-type(2) {
+            margin-left: 4px;
+          }
+          span:nth-of-type(3) {
+            margin-left: 4px;
+            opacity: 0.8;
+            display: inline-block;
+            width: 0;
+            height: 0;
+            vertical-align: middle;
+            content: "";
+            border-top-style: solid;
+            border-top-width: 4px;
+            border-right: 4px solid transparent;
+            border-bottom: 0 solid transparent;
+            border-left: 4px solid transparent;
+          }
+        }
+        &--two {
+          display: flex;
+          align-items: center;
+          width: fit-content;
+          column-gap: .5rem;
+          svg {
+            fill: #ffffff;
+          }
+          background-color: #2ea44f;
+          color: #ffffff;
+        }
+      }
+    }
   }
 }
 
