@@ -162,11 +162,14 @@ svg:not(:root) {
 
 .details .mini-nav {
   border-bottom: 1px solid #d1d5da;
+  position: -webkit-sticky;
+  position: sticky;
   overflow-x: scroll;
 }
 
 .details .mini-nav svg {
   fill: #6a737d;
+  display: none;
 }
 
 .details .mini-nav__menu {
@@ -185,8 +188,37 @@ svg:not(:root) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-column-gap: .5rem;
-          column-gap: .5rem;
+  -webkit-column-gap: 0.5rem;
+          column-gap: 0.5rem;
+  line-height: 3rem;
+  white-space: nowrap;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.4rem;
+  color: #24292e;
+  background-color: initial;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: border-bottom-color 0.36s ease-in;
+  transition: border-bottom-color 0.36s ease-in;
+}
+
+.details .mini-nav__item:hover, .details .mini-nav__item:active, .details .mini-nav__item:focus {
+  font-weight: 600;
+  border-bottom-color: #f9826c;
+  outline: 1px dotted transparent;
+  outline-offset: -1px;
+}
+
+.details .mini-nav__item .counter {
+  min-width: 2rem;
+  padding: 0 .6rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #24292e;
+  background-color: rgba(209, 213, 218, 0.5);
+  border: 1px solid transparent;
+  border-radius: 2em;
 }
 
 .details__left {
