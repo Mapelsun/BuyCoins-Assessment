@@ -270,7 +270,8 @@ svg:not(:root) {
   }
   &__right {
     .form {
-      padding: 1.6rem 0 0;
+      padding: 1.6rem 0;
+      border-bottom: 1px solid #e1e4e8;;
       display: grid;
       grid-row-gap: 1.6rem;
       &__search {
@@ -290,6 +291,7 @@ svg:not(:root) {
       &__btns {
         display: flex;
         justify-content: space-between;
+        flex-wrap: nowrap;
         &--btn {
           position: relative;
           display: inline-block;
@@ -346,6 +348,11 @@ svg:not(:root) {
           }
           background-color: #2ea44f;
           color: #ffffff;
+        }
+        &--group {
+          display: flex;
+          flex-wrap: nowrap;
+          column-gap: .5rem;
         }
       }
     }

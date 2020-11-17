@@ -356,7 +356,8 @@ svg:not(:root) {
 }
 
 .details__right .form {
-  padding: 1.6rem 0 0;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid #e1e4e8;
   display: -ms-grid;
   display: grid;
   grid-row-gap: 1.6rem;
@@ -385,6 +386,8 @@ svg:not(:root) {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .details__right .form__btns--btn {
@@ -461,6 +464,16 @@ svg:not(:root) {
 
 .details__right .form__btns--two svg {
   fill: #ffffff;
+}
+
+.details__right .form__btns--group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-column-gap: .5rem;
+          column-gap: .5rem;
 }
 
 .footer {
