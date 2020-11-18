@@ -857,6 +857,29 @@ svg:not(:root) {
           transition-duration: 0.1s;
 }
 
+@media only screen and (min-width: 48em) {
+  .details {
+        grid-template-areas: "nav nav nav nav" "left right right right";
+  }
+  .details .mini-nav {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: nav;
+  }
+  .details__left {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: left;
+  }
+  .details__right {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 3;
+    grid-area: right;
+  }
+}
+
 .footer {
   padding: 4rem 0;
   border-top: 1px solid #e1e4e8;

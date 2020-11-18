@@ -624,11 +624,27 @@ svg:not(:root) {
           fill: rgb(106, 115, 125);
         }
         &:hover,
-          &:active {
-            background-color: #f3f4f6;
-            transition-duration: 0.1s;
-          }
+        &:active {
+          background-color: #f3f4f6;
+          transition-duration: 0.1s;
+        }
       }
+    }
+  }
+
+  // 768px
+  @media only screen and (min-width: 48em) {
+    grid-template-areas:
+      "nav nav nav nav"
+      "left right right right";
+    .mini-nav {
+      grid-area: nav;
+    }
+    &__left {
+      grid-area: left;
+    }
+    &__right {
+      grid-area: right;
     }
   }
 }
