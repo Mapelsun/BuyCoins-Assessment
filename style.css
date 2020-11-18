@@ -851,6 +851,12 @@ svg:not(:root) {
   fill: #6a737d;
 }
 
+.details__right .repos__btn:hover, .details__right .repos__btn:active {
+  background-color: #f3f4f6;
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+}
+
 .footer {
   padding: 4rem 0;
   border-top: 1px solid #e1e4e8;

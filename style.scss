@@ -623,6 +623,11 @@ svg:not(:root) {
         svg {
           fill: rgb(106, 115, 125);
         }
+        &:hover,
+          &:active {
+            background-color: #f3f4f6;
+            transition-duration: 0.1s;
+          }
       }
     }
   }
