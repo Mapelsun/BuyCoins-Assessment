@@ -165,11 +165,18 @@ svg:not(:root) {
       transition: none;
     }
   }
+  &__logo {
+    min-width: 3.2rem;
+    min-height: 3.2rem;
+  }
   &__search-wrapper {
     position: relative;
+    flex: auto;
+    max-width: 28rem;
+    width: 100%;
   }
   &__search {
-    width: 20rem;
+    width: 100%;
     border: 1px solid #444d56;
     border-radius: 0.6rem;
     background: #24292e;
@@ -195,6 +202,7 @@ svg:not(:root) {
     list-style: none;
     display: flex;
     column-gap: 1.6rem;
+    margin-right: auto;
   }
   &__item {
     display: block;
@@ -206,6 +214,7 @@ svg:not(:root) {
     font-weight: 600;
     transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
     transition-property: color;
+    white-space: nowrap;
     &:hover,
     &:focus {
       color: rgba(255, 255, 255, 0.7);
@@ -279,17 +288,12 @@ svg:not(:root) {
       transition: none;
     }
   }
-  &__left, &__right {
-    display: flex;
-    align-items: center;
-    column-gap: 1.6rem;
-  }
 
   // 768px
   @media only screen and (min-width: 48em) {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    column-gap: 1.6rem;
   }
 }
 
