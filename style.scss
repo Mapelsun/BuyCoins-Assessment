@@ -556,7 +556,6 @@ svg:not(:root) {
         }
       }
       &__item {
-        text-decoration: none;
         color: inherit;
         display: flex;
         justify-content: space-between;
@@ -573,11 +572,15 @@ svg:not(:root) {
         .heading {
           margin-bottom: 1.2rem;
           column-gap: 1rem;
-          h2 {
+          a {
+            text-decoration: none;
             font-weight: 600;
             font-size: 2rem;
             color: #0366d6;
             line-height: 3rem;
+            &:hover {
+              text-decoration: underline;
+            }
           }
           span {
             padding: 0 0.7rem;

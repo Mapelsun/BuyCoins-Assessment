@@ -758,7 +758,6 @@ svg:not(:root) {
 }
 
 .details__right .repos__item {
-  text-decoration: none;
   color: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -790,11 +789,16 @@ svg:not(:root) {
           column-gap: 1rem;
 }
 
-.details__right .repos__details .heading h2 {
+.details__right .repos__details .heading a {
+  text-decoration: none;
   font-weight: 600;
   font-size: 2rem;
   color: #0366d6;
   line-height: 3rem;
+}
+
+.details__right .repos__details .heading a:hover {
+  text-decoration: underline;
 }
 
 .details__right .repos__details .heading span {
