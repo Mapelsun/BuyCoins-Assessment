@@ -303,6 +303,76 @@ svg:not(:root) {
   }
 }
 
+// Main section
+.main {
+  .main-nav {
+    border-bottom: 1px solid #d1d5da;
+    position: sticky;
+    overflow-x: scroll;
+    display: none;
+    svg {
+      fill: rgb(106, 115, 125);
+      display: none;
+    }
+    &__wrapper {
+      width: 100%;
+    }
+    &__menu {
+      list-style: none;
+      display: flex;
+    }
+    &__item {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      column-gap: 0.5rem;
+      line-height: 3rem;
+      white-space: nowrap;
+      padding: 0.8rem 1.6rem;
+      font-size: 1.4rem;
+      color: #24292e;
+      background-color: initial;
+      border: 0;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom-color 0.36s ease-in;
+      &:hover,
+      &:active,
+      &:focus {
+        font-weight: 600;
+        border-bottom-color: #f9826c;
+        outline: 1px dotted transparent;
+        outline-offset: -1px;
+      }
+      .counter {
+        min-width: 2rem;
+        padding: 0 0.6rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 1.8rem;
+        color: #24292e;
+        background-color: rgba(209, 213, 218, 0.5);
+        border: 1px solid transparent;
+        border-radius: 2em;
+      }
+    }
+  }
+
+  // 768px
+@media only screen and (min-width: 48em) {
+  margin-top: 2.4rem;
+  .main-nav {
+    display: block;
+    &__wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &__menu {
+      grid-column: 2 / -1;
+    }
+  }
+}
+}
+
 // Details section
 .details {
   display: grid;
@@ -640,17 +710,16 @@ svg:not(:root) {
 
   // 768px
   @media only screen and (min-width: 48em) {
-    grid-template-areas:
-      "nav nav nav nav"
-      "left right right right";
+    grid-template-columns: repeat(3, 1fr);
     .mini-nav {
       grid-area: nav;
+      display: none;
     }
     &__left {
-      grid-area: left;
+      grid-column: 1 / 2;
     }
     &__right {
-      grid-area: right;
+      grid-column: 2 / -1;
     }
   }
 }
@@ -668,7 +737,8 @@ svg:not(:root) {
 
     list-style: none;
     display: flex;
-    justify-content: center;
+    // justify-content: center;
+    justify-content: space-between;
     column-gap: 1rem;
   }
   &__item {
