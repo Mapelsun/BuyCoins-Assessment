@@ -1,7 +1,7 @@
 // Mobile menu toggle
 const hamburger = document.querySelector("#hamburger");
 const mobileMenu = document.querySelector("#mobileMenu");
-const navLinks = document.querySelectorAll(".nav__item");
+const navLinks = document.querySelectorAll(".mobile-nav__item");
 
 const eventListeners = () => {
   hamburger.addEventListener("click", () => {

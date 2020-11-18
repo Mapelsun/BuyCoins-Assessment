@@ -44,7 +44,8 @@ svg:not(:root) {
 }
 
 // Navigation section
-.nav {
+// --- Mobile Navigation --- //
+.mobile-nav {
   color: rgba(#ffffff, 0.7);
   background: #24292e;
   font-size: 1.4rem;
@@ -124,16 +125,172 @@ svg:not(:root) {
       width: 1.4rem;
       height: 1.4rem;
       color: #ffffff;
-      background-image: linear-gradient(#54a3ff,#006eed);
+      background-image: linear-gradient(#54a3ff, #006eed);
       background-clip: padding-box;
       border: 2px solid #24292e;
       border-radius: 50%;
     }
   }
+
+  // 768px
+  @media only screen and (min-width: 48em) {
+    display: none;
+  }
 }
 
 .show-mobile {
   display: block;
+}
+
+// --- Desktop Navigation --- //
+.nav {
+  color: rgba(#ffffff, 0.7);
+  background: #24292e;
+  font-size: 1.4rem;
+  padding: 1.6rem 3.2rem;
+  line-height: 1.5;
+  display: none;
+  svg {
+    fill: var(--main-color);
+    cursor: pointer;
+    transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+    transition-property: fill;
+    &:hover,
+    &:focus {
+      fill: rgba(255, 255, 255, 0.7);
+      transition-duration: 0.1s;
+    }
+    &:active {
+      fill: rgba(255, 255, 255, 0.7);
+      transition: none;
+    }
+  }
+  &__search-wrapper {
+    position: relative;
+  }
+  &__search {
+    width: 20rem;
+    border: 1px solid #444d56;
+    border-radius: 0.6rem;
+    background: #24292e;
+    color: var(--main-color);
+    padding: 0.5rem 1.2rem;
+    &::placeholder {
+      color: rgba(#ffffff, 0.7);
+      letter-spacing: normal;
+      font-weight: 400;
+    }
+    &:active,
+    &:focus {
+      outline: none;
+      background: var(--main-color);
+    }
+  }
+  &__search-icon {
+    position: absolute;
+    top: 0.4rem;
+    right: 1rem;
+  }
+  &__menu {
+    list-style: none;
+    display: flex;
+    column-gap: 1.6rem;
+  }
+  &__item {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.8rem 0;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    font-weight: 600;
+    transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+    transition-property: color;
+    &:hover,
+    &:focus {
+      color: rgba(255, 255, 255, 0.7);
+      transition-duration: 0.1s;
+    }
+    &:active {
+      color: rgba(255, 255, 255, 0.7);
+      transition: none;
+    }
+  }
+  .notification {
+    position: relative;
+    &__count {
+      position: absolute;
+      top: -6px;
+      left: 6px;
+      z-index: 2;
+      width: 1.4rem;
+      height: 1.4rem;
+      color: #ffffff;
+      background-image: linear-gradient(#54a3ff, #006eed);
+      background-clip: padding-box;
+      border: 2px solid #24292e;
+      border-radius: 50%;
+    }
+  }
+  .svg-group {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    cursor: pointer;
+    span {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      content: "";
+      color: #ffffff;
+      border-top-style: solid;
+      border-top-width: 4px;
+      border-right: 4px solid transparent;
+      border-bottom: 0 solid transparent;
+      border-left: 4px solid transparent;
+      margin-top: 0.35rem;
+      transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+      transition-property: color;
+    }
+    .icon-avatar {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background: #ffffff;
+      transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+      transition-property: background;
+    }
+    &:hover span,
+    &:focus span {
+      color: rgba(255, 255, 255, 0.7);
+      transition-duration: 0.1s;
+    }
+    &:hover .icon-avatar,
+    &:focus .icon-avatar {
+      background: rgba(255, 255, 255, 0.7);
+      transition-duration: 0.1s;
+    }
+    &:active span {
+      color: rgba(255, 255, 255, 0.7);
+      transition: none;
+    }
+    &:active .icon-avatar {
+      background: rgba(255, 255, 255, 0.7);
+      transition: none;
+    }
+  }
+  &__left, &__right {
+    display: flex;
+    align-items: center;
+    column-gap: 1.6rem;
+  }
+
+  // 768px
+  @media only screen and (min-width: 48em) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 // Details section
