@@ -363,6 +363,9 @@ svg:not(:root) {
     .main-nav {
       display: block;
       overflow-x: hidden;
+      svg {
+        display: inline-block;
+      }
       &__wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);

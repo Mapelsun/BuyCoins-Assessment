@@ -481,6 +481,9 @@ svg:not(:root) {
     display: block;
     overflow-x: hidden;
   }
+  .main .main-nav svg {
+    display: inline-block;
+  }
   .main .main-nav__wrapper {
     display: -ms-grid;
     display: grid;
