@@ -479,6 +479,7 @@ svg:not(:root) {
   }
   .main .main-nav {
     display: block;
+    overflow-x: hidden;
   }
   .main .main-nav__wrapper {
     display: -ms-grid;
@@ -604,6 +605,7 @@ svg:not(:root) {
 
 .details__emoji img {
   width: 2rem;
+  height: 2rem;
 }
 
 .details__emoji p {
@@ -961,6 +963,24 @@ svg:not(:root) {
   }
   .details__right {
     grid-column: 2 / -1;
+  }
+  .details__right .form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 1.6rem;
+            column-gap: 1.6rem;
+  }
+  .details__right .form__search {
+    margin-right: auto;
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+    width: 100%;
+  }
+  .details__right .form__btns {
+    -webkit-column-gap: 1.6rem;
+            column-gap: 1.6rem;
   }
 }
 

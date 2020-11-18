@@ -358,19 +358,20 @@ svg:not(:root) {
   }
 
   // 768px
-@media only screen and (min-width: 48em) {
-  margin-top: 2.4rem;
-  .main-nav {
-    display: block;
-    &__wrapper {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-    }
-    &__menu {
-      grid-column: 2 / -1;
+  @media only screen and (min-width: 48em) {
+    margin-top: 2.4rem;
+    .main-nav {
+      display: block;
+      overflow-x: hidden;
+      &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      &__menu {
+        grid-column: 2 / -1;
+      }
     }
   }
-}
 }
 
 // Details section
@@ -459,6 +460,7 @@ svg:not(:root) {
     margin-bottom: 1rem;
     img {
       width: 2rem;
+      height: 2rem;
     }
     p {
       font-size: 1.2rem;
@@ -720,6 +722,18 @@ svg:not(:root) {
     }
     &__right {
       grid-column: 2 / -1;
+      .form {
+      display: flex;
+      column-gap: 1.6rem;
+      &__search {
+        margin-right: auto;
+        flex: auto;
+        width: 100%;
+      }
+      &__btns {
+          column-gap: 1.6rem;
+      }
+    }
     }
   }
 }
