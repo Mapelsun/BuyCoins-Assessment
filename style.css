@@ -1013,8 +1013,16 @@ svg:not(:root) {
   color: #0366d6;
 }
 
+.footer__item:hover {
+  text-decoration: underline;
+}
+
 .footer__item--two {
   color: #24292e;
   cursor: none;
+}
+
+.footer__item--two:hover {
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */

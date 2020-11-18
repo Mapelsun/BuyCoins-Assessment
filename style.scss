@@ -760,9 +760,15 @@ svg:not(:root) {
     cursor: pointer;
     text-decoration: none;
     color: #0366d6;
+    &:hover {
+      text-decoration: underline;
+    }
     &--two {
       color: #24292e;
       cursor: none;
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 }
