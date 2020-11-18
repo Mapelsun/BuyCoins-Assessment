@@ -43,6 +43,12 @@ svg:not(:root) {
   margin: 1.6rem 0;
 }
 
+// Reuseable
+.row {
+  max-width: 128rem;
+  margin: 0 auto;
+}
+
 // Navigation section
 // --- Mobile Navigation --- //
 .mobile-nav {

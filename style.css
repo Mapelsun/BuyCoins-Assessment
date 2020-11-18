@@ -40,6 +40,11 @@ svg:not(:root) {
   margin: 1.6rem 0;
 }
 
+.row {
+  max-width: 128rem;
+  margin: 0 auto;
+}
+
 .mobile-nav {
   color: rgba(255, 255, 255, 0.7);
   background: #24292e;
