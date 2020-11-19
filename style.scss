@@ -724,6 +724,8 @@ svg:not(:root) {
       grid-column: 1 / 2;
       display: flex;
       flex-direction: column;
+      margin-top: -3.2rem;
+      z-index: 3;
     }
     &__emoji {
       display: none;

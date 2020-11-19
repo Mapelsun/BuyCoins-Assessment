@@ -968,6 +968,8 @@ svg:not(:root) {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-top: -3.2rem;
+    z-index: 3;
   }
   .details__emoji {
     display: none;
