@@ -510,6 +510,12 @@ svg:not(:root) {
       font-size: 1.4rem;
       line-height: 2.1rem;
       color: rgb(36, 41, 46);
+
+      &:nth-of-type(1),
+      &:nth-of-type(2),
+      &:nth-of-type(4) {
+        display: none;
+      }
     }
   }
   &__stats {
@@ -762,6 +768,13 @@ svg:not(:root) {
     }
     &__contact {
       order: 1;
+      a {
+        &:nth-of-type(1),
+        &:nth-of-type(2),
+        &:nth-of-type(4) {
+          display: flex;
+        }
+      }
     }
   }
 }

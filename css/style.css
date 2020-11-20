@@ -671,6 +671,10 @@ svg:not(:root) {
   color: #24292e;
 }
 
+.details__contact a:nth-of-type(1), .details__contact a:nth-of-type(2), .details__contact a:nth-of-type(4) {
+  display: none;
+}
+
 .details__stats {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1021,6 +1025,11 @@ svg:not(:root) {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+  }
+  .details__contact a:nth-of-type(1), .details__contact a:nth-of-type(2), .details__contact a:nth-of-type(4) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
