@@ -1,5 +1,4 @@
 class UI {
-
   toggleMobileNav() {
     const hamburger = document.querySelector("#hamburger");
     const mobileMenu = document.querySelector("#mobileMenu");
@@ -18,10 +17,14 @@ class UI {
 
   updateUserDetails(data) {
     console.log(data);
-    const avatarImage = document.querySelector('.details__image')
-    const mobileMenuImg = document.querySelectorAll('.icon-avatar')
+    const avatarImage = document.querySelector(".details__image");
+    const mobileMenuImg = document.querySelectorAll(".icon-avatar");
 
     avatarImage.src = data.avatarUrl;
-    mobileMenuImg.forEach(nav => nav.src = data.avatarUrl)
+    mobileMenuImg.forEach((nav) => (nav.src = data.avatarUrl));
+  }
+
+  printMessage() {
+    console.log(data);
   }
 }
