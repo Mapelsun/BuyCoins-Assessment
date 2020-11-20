@@ -89,6 +89,7 @@ class UI {
                     >
                     ${repo.isPrivate ? "<span>Private</span>" : ""}
                   </div>
+                  ${repo.description ? `<p class='description'>${repo.description}</p>` : ""}
                   <div class="more">
                   ${
                     langStack.name
