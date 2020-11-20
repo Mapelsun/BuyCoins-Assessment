@@ -7,12 +7,46 @@ class GitHub {
     const url = "https://api.github.com/graphql";
     const data = {
       query: `{
-      user(login: "Mapelsun") {
-        avatarUrl
-        name
-        bio
-      }
-    }`,
+        user(login: "Mapelsun") {
+          avatarUrl
+          name
+          bio
+          company
+          followers {
+            totalCount
+          }
+          following {
+            totalCount
+          }
+          websiteUrl
+          url
+          twitterUsername
+          status {
+            emoji
+            emojiHTML
+            message
+          }
+          starredRepositories {
+            totalCount
+          }
+          repositories(first: 20) {
+            totalCount
+            nodes {
+              name
+              forkCount
+              isPrivate
+              updatedAt
+              primaryLanguage {
+                color
+                name
+              }
+              stargazerCount
+            }
+          }
+          location
+          login
+        }
+      }`,
     };
 
     const response = await fetch(url, {
