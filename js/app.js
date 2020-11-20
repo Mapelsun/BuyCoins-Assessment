@@ -8,7 +8,7 @@ const documentReady = () => {
   gitHub
     .getUserDetails()
     .then((response) => ui.updateUserDetails(response.data.user))
-    .catch((error) => console.log(error));
+    .catch((error) => ui.printMessage(error));
 };
 
 const eventListeners = () => {
