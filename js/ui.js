@@ -16,7 +16,6 @@ class UI {
   }
 
   updateUserDetails(data) {
-    console.log(data);
     const avatarImage = document.querySelector(".details__image"),
       mobileMenuImg = document.querySelectorAll(".icon-avatar"),
       userName = document.querySelector(".details__name"),
@@ -72,13 +71,26 @@ class UI {
 
   formatDate(value) {
     let newValue = new Date(value);
-    return (
-      newValue.toLocaleDateString("en-US", { month: "short" }) +
-      " " +
-      newValue.toLocaleDateString("en-US", { day: "numeric" }) +
-      ", " +
-      newValue.toLocaleDateString("en-US", { year: "numeric" })
-    );
+    let now = new Date();
+
+    let diff = now - newValue;
+    let checkYear = diff / 31536000000;
+
+    if (checkYear > 1) {
+      return (
+        newValue.toLocaleDateString("en-US", { month: "short" }) +
+        " " +
+        newValue.toLocaleDateString("en-US", { day: "numeric" }) +
+        ", " +
+        newValue.toLocaleDateString("en-US", { year: "numeric" })
+      );
+    } else {
+      return (
+        newValue.toLocaleDateString("en-US", { month: "short" }) +
+        " " +
+        newValue.toLocaleDateString("en-US", { day: "numeric" })
+      );
+    }
   }
 
   displayRepositories(repos) {

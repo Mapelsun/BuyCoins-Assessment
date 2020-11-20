@@ -1030,9 +1030,6 @@ svg:not(:root) {
     -webkit-column-gap: 1.6rem;
             column-gap: 1.6rem;
   }
-  .details__right .repos__details .description {
-    width: 100%;
-  }
   .details__image {
     width: 100%;
   }
