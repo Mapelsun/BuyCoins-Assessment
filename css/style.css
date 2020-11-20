@@ -950,8 +950,8 @@ svg:not(:root) {
 
 @media only screen and (min-width: 48em) {
   .details {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
   }
   .details .mini-nav {
     grid-area: nav;
