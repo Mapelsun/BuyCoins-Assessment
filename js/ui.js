@@ -70,6 +70,17 @@ class UI {
     this.displayRepositories(data.repositories.nodes);
   }
 
+  formatDate(value) {
+    let newValue = new Date(value);
+    return (
+      newValue.toLocaleDateString("en-US", { month: "short" }) +
+      " " +
+      newValue.toLocaleDateString("en-US", { day: "numeric" }) +
+      ", " +
+      newValue.toLocaleDateString("en-US", { year: "numeric" })
+    );
+  }
+
   displayRepositories(repos) {
     const reposList = document.querySelector(".repos");
 
@@ -89,14 +100,18 @@ class UI {
                     >
                     ${repo.isPrivate ? "<span>Private</span>" : ""}
                   </div>
-                  ${repo.description ? `<p class='description'>${repo.description}</p>` : ""}
+                  ${
+                    repo.description
+                      ? `<p class='description'>${repo.description}</p>`
+                      : ""
+                  }
                   <div class="more">
                   ${
                     langStack.name
                       ? `<div class='more__lang'><span style='background-color: ${langStack.color};'></span><span>${langStack.name}</span></div>`
                       : ""
                   }
-                    <span>${repo.updatedAt}</span>
+                    <span>Updated on ${this.formatDate(repo.updatedAt)}</span>
                   </div>
                 </div>
                 <button class="repos__btn">
