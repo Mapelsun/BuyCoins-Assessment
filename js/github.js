@@ -42,6 +42,7 @@ class GitHub {
               }
               stargazerCount
               url
+              description
             }
           }
           location
