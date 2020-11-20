@@ -41,12 +41,14 @@ class GitHub {
                 name
               }
               stargazerCount
+              url
             }
           }
           location
           login
         }
-      }`,
+      }
+      `,
     };
 
     const response = await fetch(url, {
