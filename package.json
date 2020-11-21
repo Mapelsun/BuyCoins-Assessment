@@ -4,7 +4,7 @@
   "description": "BuyCoins Frontend Assessment",
   "main": "app.js",
   "scripts": {
-    "build": "webpack --mode=production",
+    "build": "node ./netlify/envScript.js && webpack --mode=production",
     "serve": "webpack-dev-server --mode=development"
   },
   "repository": {
