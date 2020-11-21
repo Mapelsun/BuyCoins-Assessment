@@ -461,6 +461,12 @@ svg:not(:root) {
   outline-offset: -1px;
 }
 
+.main .main-nav__item:hover svg,
+.main .main-nav__item:active svg,
+.main .main-nav__item:focus svg {
+  fill: #24292e;
+}
+
 .main .main-nav__item .counter {
   min-width: 2rem;
   padding: 0 0.6rem;
@@ -675,6 +681,15 @@ svg:not(:root) {
   display: none;
 }
 
+.details__contact a:nth-of-type(1), .details__contact a:nth-of-type(2) {
+  cursor: initial;
+}
+
+.details__contact a:nth-of-type(3):hover, .details__contact a:nth-of-type(4):hover {
+  text-decoration: underline;
+  color: #0366d6;
+}
+
 .details__stats {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -715,6 +730,14 @@ svg:not(:root) {
 
 .details__stats a span:nth-of-type(2) {
   color: #586069;
+}
+
+.details__stats a:hover span {
+  color: #0366d6;
+}
+
+.details__stats a:hover svg {
+  fill: #0366d6;
 }
 
 .details__right .form {
@@ -823,7 +846,17 @@ svg:not(:root) {
   -webkit-column-gap: 0.5rem;
           column-gap: 0.5rem;
   background-color: #2ea44f;
+  outline-width: 0;
   color: #ffffff;
+  font-weight: 600;
+}
+
+.details__right .form__btns--two:hover, .details__right .form__btns--two:active {
+  background-color: #2c974b;
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+  -webkit-box-shadow: rgba(20, 70, 32, 0.2) 0px 1px 0px 0px inset;
+          box-shadow: rgba(20, 70, 32, 0.2) 0px 1px 0px 0px inset;
 }
 
 .details__right .form__btns--two svg {
@@ -863,14 +896,17 @@ svg:not(:root) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-column-gap: 1rem;
-          column-gap: 1rem;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
 }
 
 .details__right .repos__details {
   color: #586069;
   line-height: 1.8rem;
   font-size: 1.2rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .details__right .repos__details .heading,
@@ -919,7 +955,6 @@ svg:not(:root) {
   margin-bottom: 1.6rem;
   font-size: 1.4rem;
   line-height: 1.5;
-  width: 83.33333%;
 }
 
 .details__right .repos__details .more {
