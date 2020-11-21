@@ -37,7 +37,8 @@ class UI {
       userName = document.querySelector(".details__name"),
       userQuote = document.querySelector(".details__emoji p"),
       userQuoteImgBox = document.querySelector(".details__emoji div"),
-      badgeBox = document.querySelector(".details__badge"),
+      badgeBox = document.querySelector(".details__badge div"),
+      badgeMessage = document.querySelector(".details__badge span"),
       repositoriesCount = document.querySelectorAll(".counter"),
       stickyProfileImg = document.querySelector(".user-sticky img"),
       stickyProfileName = document.querySelector(".user-sticky span"),
@@ -78,6 +79,7 @@ class UI {
     emojiBox.innerHTML = emoji;
     userQuoteImgBox.appendChild(emojiBox);
     badgeBox.appendChild(emojiBox);
+    badgeMessage.textContent = data.status.message;
 
     // updating stats counts
     followersCount.textContent = data.followers.totalCount;
