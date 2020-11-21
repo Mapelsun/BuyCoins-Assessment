@@ -31,9 +31,12 @@ class UI {
   }
 
   updateUserDetails(data) {
+    console.log(data);
     const avatarImage = document.querySelector(".details__image"),
       mobileMenuImg = document.querySelectorAll(".icon-avatar"),
       userName = document.querySelector(".details__name"),
+      userQuote = document.querySelector(".details__emoji p"),
+      userQuoteImgBox = document.querySelector(".details__emoji div"),
       repositoriesCount = document.querySelectorAll(".counter"),
       stickyProfileImg = document.querySelector(".user-sticky img"),
       stickyProfileName = document.querySelector(".user-sticky span"),
@@ -66,6 +69,13 @@ class UI {
 
     // updating user name
     userName.textContent = data.login;
+
+    // updating user quote box
+    userQuote.textContent = data.status.message;
+    const emojiBox = document.createElement('div');
+    const emoji = data.status.emojiHTML;
+    emojiBox.innerHTML = emoji;
+    userQuoteImgBox.appendChild(emojiBox);
 
     // updating stats counts
     followersCount.textContent = data.followers.totalCount;
