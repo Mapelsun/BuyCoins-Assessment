@@ -432,7 +432,6 @@ svg:not(:root) {
   }
 }
 
-
 // Details section
 .details {
   display: grid;
@@ -499,6 +498,7 @@ svg:not(:root) {
     // flex-wrap: wrap;
     gap: 2.5rem;
     margin-bottom: 2.4rem;
+    position: relative;
   }
   &__image {
     display: block;
@@ -507,12 +507,16 @@ svg:not(:root) {
     border-radius: 50%;
     background: #444d56;
     z-index: 3;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 1px;
   }
   &__name {
     font-size: 2rem;
     font-weight: 300;
     color: #586069;
     line-height: 2.4rem;
+  }
+  &__badge {
+    display: none;
   }
   &__emoji {
     display: flex;
@@ -839,6 +843,23 @@ svg:not(:root) {
       margin-top: -3.2rem;
       // z-index: 3;
     }
+    &__badge {
+      position: absolute;
+      bottom: 4rem;
+      left: 100%;
+      z-index: 3;
+      width: 3.8rem;
+      height: 3.8rem;
+      margin-bottom: 3.2rem;
+      margin-left: -4rem;
+      border-radius: 50%;
+      box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px 0px;
+      border: 1px solid #e1e4e8;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     &__emoji {
       display: none;
     }
@@ -923,12 +944,12 @@ svg:not(:root) {
   }
 
   // 1024px
-@media only screen and (min-width: 64em) {
-  &__nav {
-    justify-content: space-between;
+  @media only screen and (min-width: 64em) {
+    &__nav {
+      justify-content: space-between;
+    }
+    svg {
+      display: flex;
+    }
   }
-  svg {
-    display: flex;
-  }
-}
 }

@@ -658,6 +658,7 @@ svg:not(:root) {
           align-items: center;
   gap: 2.5rem;
   margin-bottom: 2.4rem;
+  position: relative;
 }
 
 .details__image {
@@ -667,6 +668,8 @@ svg:not(:root) {
   border-radius: 50%;
   background: #444d56;
   z-index: 3;
+  -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 1px;
+          box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 1px;
 }
 
 .details__name {
@@ -674,6 +677,10 @@ svg:not(:root) {
   font-weight: 300;
   color: #586069;
   line-height: 2.4rem;
+}
+
+.details__badge {
+  display: none;
 }
 
 .details__emoji {
@@ -1117,6 +1124,30 @@ svg:not(:root) {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-top: -3.2rem;
+  }
+  .details__badge {
+    position: absolute;
+    bottom: 4rem;
+    left: 100%;
+    z-index: 3;
+    width: 3.8rem;
+    height: 3.8rem;
+    margin-bottom: 3.2rem;
+    margin-left: -4rem;
+    border-radius: 50%;
+    -webkit-box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px 0px;
+            box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px 0px;
+    border: 1px solid #e1e4e8;
+    background: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .details__emoji {
     display: none;

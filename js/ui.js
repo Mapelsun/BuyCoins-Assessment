@@ -37,6 +37,7 @@ class UI {
       userName = document.querySelector(".details__name"),
       userQuote = document.querySelector(".details__emoji p"),
       userQuoteImgBox = document.querySelector(".details__emoji div"),
+      badgeBox = document.querySelector(".details__badge"),
       repositoriesCount = document.querySelectorAll(".counter"),
       stickyProfileImg = document.querySelector(".user-sticky img"),
       stickyProfileName = document.querySelector(".user-sticky span"),
@@ -76,6 +77,7 @@ class UI {
     const emoji = data.status.emojiHTML;
     emojiBox.innerHTML = emoji;
     userQuoteImgBox.appendChild(emojiBox);
+    badgeBox.appendChild(emojiBox);
 
     // updating stats counts
     followersCount.textContent = data.followers.totalCount;
