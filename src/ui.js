@@ -1,4 +1,4 @@
-class UI {
+export default class UI {
   toggleMobileNav() {
     const hamburger = document.querySelector("#hamburger"),
       mobileMenu = document.querySelector("#mobileMenu"),
