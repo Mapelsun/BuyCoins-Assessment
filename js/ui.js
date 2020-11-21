@@ -31,7 +31,6 @@ class UI {
   }
 
   updateUserDetails(data) {
-    console.log(data);
     const avatarImage = document.querySelector(".details__image"),
       mobileMenuImg = document.querySelectorAll(".icon-avatar"),
       userName = document.querySelector(".details__name"),
