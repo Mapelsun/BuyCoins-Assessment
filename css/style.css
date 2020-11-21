@@ -116,6 +116,26 @@ svg:not(:root) {
   background: var(--main-color);
 }
 
+.mobile-nav__search:active .mobile-nav__search::-webkit-input-placeholder,
+.mobile-nav__search:focus .mobile-nav__search::-webkit-input-placeholder {
+  color: #24292e;
+}
+
+.mobile-nav__search:active .mobile-nav__search:-ms-input-placeholder,
+.mobile-nav__search:focus .mobile-nav__search:-ms-input-placeholder {
+  color: #24292e;
+}
+
+.mobile-nav__search:active .mobile-nav__search::-ms-input-placeholder,
+.mobile-nav__search:focus .mobile-nav__search::-ms-input-placeholder {
+  color: #24292e;
+}
+
+.mobile-nav__search:active .mobile-nav__search::placeholder,
+.mobile-nav__search:focus .mobile-nav__search::placeholder {
+  color: #24292e;
+}
+
 .mobile-nav__search-icon {
   position: absolute;
   top: 0.4rem;
@@ -266,6 +286,26 @@ svg:not(:root) {
   background: var(--main-color);
 }
 
+.nav__search:active .nav__search::-webkit-input-placeholder,
+.nav__search:focus .nav__search::-webkit-input-placeholder {
+  color: #24292e;
+}
+
+.nav__search:active .nav__search:-ms-input-placeholder,
+.nav__search:focus .nav__search:-ms-input-placeholder {
+  color: #24292e;
+}
+
+.nav__search:active .nav__search::-ms-input-placeholder,
+.nav__search:focus .nav__search::-ms-input-placeholder {
+  color: #24292e;
+}
+
+.nav__search:active .nav__search::placeholder,
+.nav__search:focus .nav__search::placeholder {
+  color: #24292e;
+}
+
 .nav__search-icon {
   position: absolute;
   top: 0.4rem;
@@ -311,6 +351,7 @@ svg:not(:root) {
 
 .nav .notification {
   position: relative;
+  padding-top: .5rem;
 }
 
 .nav .notification__count {
@@ -329,6 +370,8 @@ svg:not(:root) {
 }
 
 .nav .svg-group {
+  -ms-flex-item-align: center;
+      align-self: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

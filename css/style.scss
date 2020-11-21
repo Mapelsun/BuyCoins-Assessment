@@ -89,6 +89,10 @@ svg:not(:root) {
       outline: none;
       background: var(--main-color);
     }
+    &:active &::placeholder,
+    &:focus &::placeholder {
+      color: #24292e;
+    }
   }
   &__search-icon {
     position: absolute;
@@ -198,6 +202,10 @@ svg:not(:root) {
       outline: none;
       background: var(--main-color);
     }
+    &:active &::placeholder,
+    &:focus &::placeholder {
+      color: #24292e;
+    }
   }
   &__search-icon {
     position: absolute;
@@ -233,6 +241,7 @@ svg:not(:root) {
   }
   .notification {
     position: relative;
+    padding-top: .5rem;
     &__count {
       position: absolute;
       top: -6px;
@@ -248,6 +257,7 @@ svg:not(:root) {
     }
   }
   .svg-group {
+    align-self: center;
     display: flex;
     align-items: center;
     column-gap: 0.5rem;
