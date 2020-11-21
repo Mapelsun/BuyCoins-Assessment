@@ -77,7 +77,12 @@ class UI {
     const emoji = data.status.emojiHTML;
     emojiBox.innerHTML = emoji;
     userQuoteImgBox.appendChild(emojiBox);
-    badgeBox.appendChild(emojiBox);
+
+    // updating badgeBox
+    const emojiWrapper = document.createElement('div');
+    const emojiTwo = data.status.emojiHTML;
+    emojiWrapper.innerHTML = emojiTwo;
+    badgeBox.appendChild(emojiWrapper);
     badgeMessage.textContent = data.status.message;
 
     // updating stats counts
