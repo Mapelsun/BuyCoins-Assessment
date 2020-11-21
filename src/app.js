@@ -1,3 +1,6 @@
+import GitHub from './github'
+import UI from './ui'
+
 const gitHub = new GitHub();
 const ui = new UI();
 

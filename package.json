@@ -4,7 +4,7 @@
   "description": "BuyCoins Frontend Assessment",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode=production"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/Mapelsun/BuyCoins-Assessment#readme",
   "dependencies": {
-    "dotenv": "^8.2.0"
+    "@babel/core": "^7.12.7",
+    "babel-loader": "^8.2.1",
+    "dotenv": "^8.2.0",
+    "webpack": "^5.6.0",
+    "webpack-cli": "^4.2.0"
   }
 }
