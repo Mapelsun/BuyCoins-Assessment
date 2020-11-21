@@ -241,7 +241,7 @@ svg:not(:root) {
   }
   .notification {
     position: relative;
-    padding-top: .5rem;
+    padding-top: 0.5rem;
     &__count {
       position: absolute;
       top: -3px;
@@ -779,6 +779,9 @@ svg:not(:root) {
             border: 1px solid #e1e4e8;
             display: flex;
             align-items: center;
+
+            display: inline-table;
+            padding: 2px 7px;
           }
         }
         .description {
