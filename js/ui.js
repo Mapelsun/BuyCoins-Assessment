@@ -15,11 +15,28 @@ class UI {
     });
   }
 
+  stickyProfile() {
+    const stickyPic = document.querySelector(".user-sticky");
+    if (window.pageYOffset > 400) {
+      stickyPic.classList.add("make-sticky");
+      stickyPic.style.opacity = "1";
+      stickyPic.style.display = "flex";
+      stickyPic.style.pointerEvents = "auto";
+    } else {
+      stickyPic.classList.remove("make-sticky");
+      stickyPic.style.opacity = "0";
+      stickyPic.style.display = "none";
+      stickyPic.style.pointerEvents = "none";
+    }
+  }
+
   updateUserDetails(data) {
     const avatarImage = document.querySelector(".details__image"),
       mobileMenuImg = document.querySelectorAll(".icon-avatar"),
       userName = document.querySelector(".details__name"),
       repositoriesCount = document.querySelectorAll(".counter"),
+      stickyProfileImg = document.querySelector(".user-sticky img"),
+      stickyProfileName = document.querySelector(".user-sticky span"),
       followersCount = document.querySelector(
         ".details__stats a:nth-of-type(1) span:nth-of-type(1)"
       ),
@@ -69,6 +86,10 @@ class UI {
 
     // populating repositories list
     this.displayRepositories(data.repositories.nodes);
+
+    // updating sticky profile image and name
+    stickyProfileImg.src = data.avatarUrl;
+    stickyProfileName.textContent = data.login;
   }
 
   formatDate(value) {

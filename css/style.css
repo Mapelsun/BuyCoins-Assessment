@@ -477,6 +477,24 @@ svg:not(:root) {
   border-radius: 2em;
 }
 
+.main .user-sticky {
+  display: none;
+  opacity: 0;
+}
+
+.main .user-sticky img {
+  width: 3.2rem;
+  border-radius: 50%;
+}
+
+.main .user-sticky span {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #586069;
+  line-height: 1.25;
+  display: inline-block;
+}
+
 @media only screen and (min-width: 48em) {
   .main {
     margin-top: 2.4rem;
@@ -484,6 +502,11 @@ svg:not(:root) {
   .main .main-nav {
     display: block;
     overflow-x: hidden;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background-color: #ffffff;
   }
   .main .main-nav svg {
     display: inline-block;
@@ -496,6 +519,59 @@ svg:not(:root) {
   }
   .main .main-nav__menu {
     grid-column: 2 / -1;
+  }
+  .main .main-nav .user-sticky {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 /2;
+  }
+}
+
+.make-sticky {
+  position: fixed;
+  top: 0;
+  z-index: 90;
+  width: 233px;
+  word-break: break-all;
+  pointer-events: auto;
+  opacity: 1;
+  height: 4.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -590,6 +666,7 @@ svg:not(:root) {
   height: auto;
   border-radius: 50%;
   background: #444d56;
+  z-index: 3;
 }
 
 .details__name {
@@ -1040,7 +1117,6 @@ svg:not(:root) {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-top: -3.2rem;
-    z-index: 3;
   }
   .details__emoji {
     display: none;

@@ -2,7 +2,6 @@ const gitHub = new GitHub();
 const ui = new UI();
 
 const documentReady = () => {
-
   ui.toggleMobileNav();
 
   gitHub
@@ -16,3 +15,4 @@ const eventListeners = () => {
 };
 
 eventListeners();
+window.onscroll = ui.stickyProfile;
