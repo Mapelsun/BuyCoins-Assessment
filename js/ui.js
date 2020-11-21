@@ -185,6 +185,6 @@ class UI {
   }
 
   printMessage(data) {
-    console.log(data);
+    alert(data);
   }
 }

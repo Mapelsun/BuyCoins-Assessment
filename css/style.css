@@ -356,7 +356,7 @@ svg:not(:root) {
 
 .nav .notification__count {
   position: absolute;
-  top: -6px;
+  top: -3px;
   left: 6px;
   z-index: 2;
   width: 1.4rem;
