@@ -1,6 +1,6 @@
 class GitHub {
   constructor() {
-    this.auth_token = "f05b7c8a2fe25fe54190556f78fd9f26b681f3aa";
+    this.auth_token = process.APP_TOKEN;
   }
 
   async getUserDetails() {
