@@ -19,7 +19,7 @@ class UI {
     const avatarImage = document.querySelector(".details__image"),
       mobileMenuImg = document.querySelectorAll(".icon-avatar"),
       userName = document.querySelector(".details__name"),
-      repositoriesCount = document.querySelector(".main-nav__item .counter"),
+      repositoriesCount = document.querySelectorAll(".counter"),
       followersCount = document.querySelector(
         ".details__stats a:nth-of-type(1) span:nth-of-type(1)"
       ),
@@ -63,7 +63,9 @@ class UI {
     twitter.textContent = `@${data.twitterUsername}`;
 
     // updating total repositories count
-    repositoriesCount.textContent = data.repositories.totalCount;
+    repositoriesCount.forEach(
+      (count) => (count.textContent = data.repositories.totalCount)
+    );
 
     // populating repositories list
     this.displayRepositories(data.repositories.nodes);

@@ -307,7 +307,6 @@ svg:not(:root) {
 .main {
   .main-nav {
     border-bottom: 1px solid #d1d5da;
-    position: sticky;
     overflow-x: scroll;
     display: none;
     svg {
@@ -389,6 +388,9 @@ svg:not(:root) {
   .mini-nav {
     border-bottom: 1px solid #d1d5da;
     position: sticky;
+    top: 0;
+    z-index: 4;
+    background-color: #ffffff;
     overflow-x: scroll;
     svg {
       fill: rgb(106, 115, 125);

@@ -410,8 +410,6 @@ svg:not(:root) {
 
 .main .main-nav {
   border-bottom: 1px solid #d1d5da;
-  position: -webkit-sticky;
-  position: sticky;
   overflow-x: scroll;
   display: none;
 }
@@ -511,6 +509,9 @@ svg:not(:root) {
   border-bottom: 1px solid #d1d5da;
   position: -webkit-sticky;
   position: sticky;
+  top: 0;
+  z-index: 4;
+  background-color: #ffffff;
   overflow-x: scroll;
 }
 
