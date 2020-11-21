@@ -16,7 +16,5 @@
     "url": "https://github.com/Mapelsun/BuyCoins-Assessment/issues"
   },
   "homepage": "https://github.com/Mapelsun/BuyCoins-Assessment#readme",
-  "dependencies": {
-    "dotenv": "^8.2.0"
-  }
+  "dependencies": {}
 }
