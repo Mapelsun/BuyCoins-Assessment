@@ -29,7 +29,7 @@ export default class GitHub {
           starredRepositories {
             totalCount
           }
-          repositories(first: 20) {
+          repositories(last: 20) {
             totalCount
             nodes {
               name
