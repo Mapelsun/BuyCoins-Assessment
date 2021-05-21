@@ -69,7 +69,7 @@ export default class UI {
     mobileMenuImg.forEach((nav) => (nav.src = data.avatarUrl));
 
     // updating user name
-    userName.textContent = data.login;
+    userName.textContent = data.name;
 
     // updating user quote box
     userQuote.textContent = data.status.message;
